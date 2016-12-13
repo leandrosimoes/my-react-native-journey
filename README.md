@@ -19,7 +19,54 @@ Este é um repositório pessoal onde eu coloco todos os problemas, configuraçõ
 * Configuração do VS Code:
 	- No VS Code, aperte `F1`, digite `Install Extensions` e aperte `ENTER`. Isso irá abrir o menu de instalação de extensões.
 	- Procure por `VS Code React Standard Style snippets` e instale a extensão.
-	- Reinicie seu VS Code.
+	- Procure por `ESLint` e instale a extensão. (clique [aqui](http://eslint.org/) caso queira conhecer mais sobre ESLint).
+	- Na pasta do projeto, abra um prompt de comando e digite `npm install eslint -g`.
+	- Na pasta do projeto, abra um prompt de comando e digite `npm install eslint-plugin-react --save-dev `.
+	- Na pasta do projeto, abra um prompt de comando e digite `npm install eslint-plugin-react-native --save-dev `.
+	- No VS Code, aperte `F1`, digite `Create '.eslintrc.json' File`. Com este comando, será criado um arquivo na raiz do projeto chamado `.eslintrc.json`. Nele está constando as configurações básicas do ESLint. Copie e cole estas configurações abaixo e em seguida Reinicie seu VS Code. Após isso seu VS Code estará configurado para mostrar erros e warnings sobre react e react-native.
+
+```json
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module",
+        "ecmaVersion": 7
+    },
+    "rules": {
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",            
+        "comma-dangle":"off",
+        "react-native/no-unused-styles": "error",
+        "react-native/split-platform-components": "error",
+        "react/prop-types": "off",
+        "no-extra-boolean-cast": "off"
+    },
+    "plugins": [
+        "react",
+        "react-native"
+    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "settings": {
+        "react": {
+        "pragma": "React",
+        "version": "0.14.8"
+        }
+    }
+}
+```
 
 **OBS: A instalação do Android Studio não é obrigatória, porém facilita e muito algumas configurações e também foi útil para ver alguns erros de JAVA e na criação das AVD (Android Virtual Devices). Você também não precisa utilizar o VS Code, porém foi o que eu me adaptei melhor.**
 
