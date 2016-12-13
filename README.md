@@ -14,8 +14,8 @@ Este é um repositório pessoal onde eu coloco todos os problemas, configuraçõ
 * Android Studio: [download](https://developer.android.com/studio/index.html?gclid=Cj0KEQiAsrnCBRCTs7nqwrm6pcYBEiQAcQSznM4iv3JZqUhEyWeYAY5Bdr9dMNAYrH-dOihoYtv-gXYaAmOu8P8HAQ).
 * VS Code: [download](https://code.visualstudio.com/).
 * SDKS E VARIÁVEIS DE AMBIENTE:
-	- Para instalação dos SDKS, sujiro fazer pelo Android Studio e verificar quais devem ser instalados [aqui](https://facebook.github.io/react-native/docs/getting-started.html).
-	- Para configuração das variáveis de ambiente, sujiro verificar [aqui](https://facebook.github.io/react-native/docs/getting-started.html)	   
+	- Para instalação dos SDKS, sugiro fazer pelo Android Studio e verificar quais devem ser instalados [aqui](https://facebook.github.io/react-native/docs/getting-started.html).
+	- Para configuração das variáveis de ambiente, sugiro verificar [aqui](https://facebook.github.io/react-native/docs/getting-started.html)	   
 * Configuração do VS Code:
 	- Abra o prompt de comando e digite `npm install eslint -g` para instalar o ESLint global. Caso não saiba o que é o ESLint clique [aqui](http://eslint.org/).
 	- No VS Code, aperte `F1`, digite `Install Extensions` e aperte `ENTER`. Isso irá abrir o menu de instalação de extensões.
