@@ -133,3 +133,6 @@ systemProp.https.proxyPassword=****
 ```
 
 * O problema de lentidão na compilação pode ser também por que você está com a opção `Debug JS Remotely` habilitada ao compilar.
+
+### Contribuir
+Sinta-se a vontade para abrir pull requests com algum problema e solução que encontrou durante o desenvolvimento. Basta abrir um Pull Request.
