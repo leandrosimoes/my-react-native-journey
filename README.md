@@ -17,21 +17,11 @@ Este é um repositório pessoal onde eu coloco todos os problemas, configuraçõ
 	- Para instalação dos SDKS, sugiro fazer pelo Android Studio e verificar quais devem ser instalados [aqui](https://facebook.github.io/react-native/docs/getting-started.html).
 	- Para configuração das variáveis de ambiente, sugiro verificar [aqui](https://facebook.github.io/react-native/docs/getting-started.html)	   
 * Configuração do VS Code:
-	- Abra o prompt de comando e digite `npm install eslint -g` para instalar o ESLint global. Caso não saiba o que é o ESLint clique [aqui](http://eslint.org/).
 	- No VS Code, aperte `F1`, digite `Install Extensions` e aperte `ENTER`. Isso irá abrir o menu de instalação de extensões.
-	- Procure por `ESLint` e instale a extensão oficial.
+	- Procure por `VS Code React Standard Style snippets` e instale a extensão.
 	- Reinicie seu VS Code.
-	- Abra o prompt de comando na pasta de seu projeto e digite digite `npm install eslint-config-rallycoding --save-dev` para instalar um plugin do ESLint para react.
-	- Crie um arquivo na raiz do seu projeto chamado `.eslintrc` e abra-o.
-	- Dento dele, coloque a seguinte configuração:
-	
-```json
-{
-   "extends": "rallycoding"
-}
-```
 
-**OBS: Com essas configurações, seu VS Code irá agora mostrar erros de sintaxe para react-native. Caso queira um desenvolvimento ainda mais rápido, recomendo a instalação da extensão `VS Code React Standard Style snippets`, para isso, abra novamente o menu de instalação de extensões, instale a extensão pesquisando por `VS Code React Standard Style snippets`. A instalação do Android Studio não é obrigatória, porém facilita e muito algumas configurações e também foi útil para ver alguns erros de JAVA e na criação das AVD (Android Virtual Devices). Você não precisa utilizar o VS Code, porém foi o que eu me adaptei melhor.**
+**OBS: A instalação do Android Studio não é obrigatória, porém facilita e muito algumas configurações e também foi útil para ver alguns erros de JAVA e na criação das AVD (Android Virtual Devices). Você também não precisa utilizar o VS Code, porém foi o que eu me adaptei melhor.**
 
 ### Instalação do react-native:
 * Abra um prompt de comando em modo administrador, não importando o diretório.
