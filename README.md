@@ -49,8 +49,10 @@ Este é um repositório pessoal onde eu coloco todos os problemas, configuraçõ
         "constructor-super": "warn",
         "valid-typeof": "warn",            
         "comma-dangle":"off",
-        "react-native/no-unused-styles": "error",
-        "react-native/split-platform-components": "error",
+        "react-native/no-unused-styles": "warn",
+        "react-native/split-platform-components": "warn",
+        "react-native/no-inline-styles": "warn",
+        "react-native/no-color-literals": "warn",
         "react/prop-types": "off",
         "no-extra-boolean-cast": "off"
     },
