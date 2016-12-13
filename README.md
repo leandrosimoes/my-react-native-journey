@@ -24,15 +24,14 @@ Este é um repositório pessoal onde eu coloco todos os problemas, configuraçõ
 	- Abra o prompt de comando na pasta de seu projeto e digite digite `npm install eslint-config-rallycoding --save-dev` para instalar um plugin do ESLint para react.
 	- Crie um arquivo na raiz do seu projeto chamado `.eslintrc` e abra-o.
 	- Dento dele, coloque a seguinte configuração:
-	   ```json
-		{
-		   "extends": "rallycoding"
-		}
-	   ```
-	- Com essas configurações, seu VS Code irá agora mostrar erros de sintaxe para react-native.
-	- Caso queira um desenvolvimento ainda mais rápido, recomendo a instalação da extensão `VS Code React Standard Style snippets", para isso, abra novamente o menu de instalação de extensões, instale a extensão pesquisando por "VS Code React Standard Style snippets`.
 	
-**OBS: Android Studio não é obrigatório, porém facilita e muito algumas configurações e também foi útil para ver alguns erros de JAVA e na criação das AVD (Android Virtual Devices). Você não precisa utilizar o VS Code, porém foi o que eu me adaptei melhor.**
+```json
+{
+   "extends": "rallycoding"
+}
+```
+
+**OBS: Com essas configurações, seu VS Code irá agora mostrar erros de sintaxe para react-native. Caso queira um desenvolvimento ainda mais rápido, recomendo a instalação da extensão `VS Code React Standard Style snippets`, para isso, abra novamente o menu de instalação de extensões, instale a extensão pesquisando por `VS Code React Standard Style snippets`. A instalação do Android Studio não é obrigatória, porém facilita e muito algumas configurações e também foi útil para ver alguns erros de JAVA e na criação das AVD (Android Virtual Devices). Você não precisa utilizar o VS Code, porém foi o que eu me adaptei melhor.**
 
 ### Instalação do react-native:
 * Abra um prompt de comando em modo administrador, não importando o diretório.
