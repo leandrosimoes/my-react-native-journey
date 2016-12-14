@@ -120,8 +120,8 @@ Este é um repositório pessoal onde eu coloco todos os problemas, configuraçõ
 ```
 MYAPP_RELEASE_STORE_FILE=nomedoarquivo.keystore
 MYAPP_RELEASE_KEY_ALIAS=nomedoalias
-MYAPP_RELEASE_STORE_PASSWORD=a
-MYAPP_RELEASE_KEY_PASSWORD=a
+MYAPP_RELEASE_STORE_PASSWORD=****
+MYAPP_RELEASE_KEY_PASSWORD=****
 ```
 	
 * Abra agora o arquivo `app/build.gradle` e adicione as seguintes configurações:
