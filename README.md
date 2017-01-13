@@ -1,3 +1,5 @@
+[English Version](https://github.com/leandrosimoes/my-react-native-journey/blob/master/en/README.md)
+
 # my-react-native-journey
 Este é um repositório pessoal onde eu coloco todos os problemas, configurações e experiências em minha jornada de desenvolvimento com react-native.
 
