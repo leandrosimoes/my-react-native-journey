@@ -72,61 +72,57 @@ This is a personal repo that I put my throbleshotings, configurations and experi
 
 **OBS: The Android Studio installation is not required, by the way doing this will save you a lot of time, will be usefull to see some JAVA exceptions and warnings and very usefull to create the AVD (Android Virtual Devices). The VS Code installations is not required too, but this was the better choice for me.**
 
-### React-native Installation Guide [#referência](https://facebook.github.io/react-native/docs/getting-started.html):
-* Abra um prompt de comando em modo administrador, não importando o diretório.
+### React-native Installation Guide [#reference](https://facebook.github.io/react-native/docs/getting-started.html):
 * Open the command prompt with elevated rights.
 * Type `npm install react-native-cli -g` and press `ENTER` to install the react-native globally **(Maybe this will take several minutes to finish, just wait)**.
 	
 ### Creating your first project:
-* Abra um prompt de comando já com o caminho onde irá ficar a pasta de seu projeto selecionado. Ex: Seu projeto é `C:\Temp\meuprojeto` abra o prompt em `C:\Temp`.
 * Open the command prompt with elevated rights.
 * Type `react-native init nameofyourproject` and press `ENTER` **(The react-native files will be downloaded and will take several minutes to finish, just wait)**.
 	
-### Rodando o projeto no emulador (AVD):
-* Caso queira rodar em um AVD, basta seguir [este](https://developer.android.com/studio/run/managing-avds.html) tutorial para a criação e execução do AVD de acordo com o device.
-* Depois de instalado, verifique se o device aparece na lista do ADB (Android Debug Bridge) digitando o seguinte comando: "adb devices"
-	- Caso o device não apareça na lista, reinicie a maquina.
-* Depois de conseguir visualizar o device no ADB, basta executar o comando `react-native run-android` na pasta de seu projeto.
-* Se tudo correr bem, o APK será instalado na AVD e já será executado.
+### Run the app on AVD:
+* To create the AVD just follow [this](https://developer.android.com/studio/run/managing-avds.html) tutorial.
+* To verify if the ADV is running, open the command prompt and type `adb devices`.
+    - If the device is not running, reboot your pc.
+* To run the app, open the command prompt on the project folder and type `react-native run-android`.
+* If everything goes fine, the app will be installed and open on the AVD.
 
-### Rodando em seu dispositivo físico:
-* Plugue seu device no computador pelo USB.
+### Run the app on your device:
+* Attach the device on pc.
+* To verify if the ADV is running, open the command prompt and type `adb devices`.
 * Abra o prompt de comando e digite `adb devices` para verificar se seu dispositivo está na lista.
-	- Caso seu dispositivo não esteja na lista, tente reiniciar ou reinstalar os drivers.
-* Caso seu dispositivo esteja na lista, digite o comando `adb reverse tcp:8081 tcp:8081`. Este comando serve para indicar ao device a porta correta de I/O que ele irá se comunicar com o ADB.
-	- Este comando deve ser executado sempre que o dispositivo for plugado na maquina.
-* Por fim, execute o comando `react-native run-android` na pasta do seu projeto.
-* Se tudo correr bem, o APK será instalado em seu device e já será executado.
+    - If the device is not running, verify if the drivers are installed and reboot your pc.
+* To run the app, open the command prompt on the project folder and type `react-native run-android`.    
+* If everything goes fine, the app will be installed and open on the device.
 	
-### Habilitando Hot Reload:
-* O Hot Reload serve para que seu dispositivo ou AVD seja atualizado em tempo real com as modificações feitas sempre que o documento é salvo.
-* Para habilitá-lo no device, balence o aparelho para aparecer o menu e clique em `Enable Hot Reload`.
-* Para habilitá-lo no AVD, aperte Ctrl+M para abrir o menu e clique em `Enable Hot Reload`.
+### Enable Hot Reloading
+* The Hot Reloading is used to update the changes on your device/AVD after save the code in real time.
+* To enable on device, shake the device to open the menu and press `Enable Hot Reloading` option.
+* To enable on AVD, press Ctrl+M to open the menu and press `Enable Hot Reloading` option.
 	
-### Debugando sua aplicação:
-* Abra o menu no device ou AVD e clique em `Debug JS Remotely`, se tudo correr bem, uma aba do Chrome será aberta e você poderá abrir a developer tools e debuggar como se debuga um javascript normal.
-* Caso queira ver logs disparados pelo JAVA, basta abrir o prompt de comando e digitar `adb logcat`, isso ira mostrar todo o log JAVA e também os logs que irão aparecer em tempo real.
+### Debugging your app:
+* Open the menu on device/AVD and press the `Debug JS Remotely` option. A new browser tab will be open. Now just open de developer tools to debug.
+* If you want to see the JAVA logs, just open the command prompt and type `adb logcat`, this will show all JAVA log in real time.
 
-### Desplugando o device:
-* Se você tentar remover o dispositivo com segurança, será alertado de que não é possível pois está sendo utilizado por outro processo. Isso ocorre por que ele está em constante comunicação com o ADB. Para conseguir remover, basta digitar o comando `adb kill-server`.
+### Detach your device:
+* To detach your device safely, open the command prompt and type `adb kill-server`, than, detach your device.
 		
-### Gerando versão final do APK (Signed APK):
-* Para gerar um apk em versão "release" deve-se realizar algumas configurações.
-* Primeiro você deve gerar uma keystore para seu aplicativo. Esta keystore deve ser guardada para sempre, pois é através dela que a Play Store guarda os dados de download, hating e etc.
-* Para gerar a keystore você pode seguir [este](http://facebook.github.io/react-native/releases/0.39/docs/signed-apk-android.html) tutorial, porém eu achei mais fácil fazer pelo Android Studio.
-* Para gerar através do Android Studio, basta abrir o menu `Build > Generate Signed APK`.
-* Em seguida clique em `Create new` para criar uma nova keystore.
-* Escolha a pasta de destino da chave o seguinte caminho `..caminhoDoProjeto/android/app/` e salve nesta pasta.
-* Agora em seu projeto, abra o arquivo `gradle.properties` e insira as seguintes variáveis:
+### Build the Signed APK:
+* To build the "release" APK you need to config some things.
+* First you need to generate the your keystore app. This keystore can't be lost, this key is used by Play Store to store informations like download, hating, ect.
+* To generate the keystore by command prompt just follow [this](http://facebook.github.io/react-native/releases/0.39/docs/signed-apk-android.html) tutorial.
+* To generate the keystore by Android Studio (easiest way), open the Android Studio, then open the `Build > Generate Signed APK` menu.
+* Now click on `Create New` option to criate a new keystore.
+* Choose the `..projectFolder/android/app/` as destination folder.
+* Now open the `gradle.properties` file and put this variables inside it:
 
 ```
-MYAPP_RELEASE_STORE_FILE=nomedoarquivo.keystore
-MYAPP_RELEASE_KEY_ALIAS=nomedoalias
+MYAPP_RELEASE_STORE_FILE=filename.keystore
+MYAPP_RELEASE_KEY_ALIAS=aliasname
 MYAPP_RELEASE_STORE_PASSWORD=****
 MYAPP_RELEASE_KEY_PASSWORD=****
 ```
-	
-* Abra agora o arquivo `app/build.gradle` e adicione as seguintes configurações:
+* Now open the `app/build.gradle` and put this settings inside it:
 
 ```				
 signingConfigs {
@@ -139,22 +135,21 @@ signingConfigs {
 }
 ```
 
-* Para gerar o APK você pode gerar por linha de comando ou pelo android studio. Eu recomendo por linha de comando pois o Android Studio demora para abrir.
-* Para gerar por linha de comando, primeiro execute o seguinte comando na pasta do seu projeto: `cd android && gradlew assembleRelease`.
-	- Caso compile com sucesso, o APK será gerado na pasta `...caminhoDoProjeto/android/app/build/outputs/apk/` com o nome de `apk-release.apk`.
-* Para gerar pelo Android Studio, basta clicar em `Build > Generate Generate Signed APK` em seguida clicar em `Next`, escolher a pasta `...caminhoDoProjeto/android/app/build/outputs/apk/` e clicar em `Finish`.
-	- Caso compile com sucesso, o APK será gerado na pasta "...caminhoDoProjeto/android/app/build/outputs/apk/" com o nome de "apk-release.apk".
-	- Caso queira testar a versão release em seu device ou AVD, basta executar o comando `react-native run-android --variant=release`.
+* To generate the app by command prompt, open the command prompt at your project folder and type `cd android && gradlew assembleRelease`.
+    - If everything goes fine, the APK will be generated at `...caminhoDoProjeto/android/app/build/outputs/apk/` with the name of `apk-release.apk`.
+* To generate the app by Android Studio, just open the `Build > Generate Generate Signed APK` menu and click `Next`, choose the `...caminhoDoProjeto/android/app/build/outputs/apk/` as the destination path and click on `Finish`.
+    - If everything goes fine, the APK will be generated at `...caminhoDoProjeto/android/app/build/outputs/apk/` with the name of `apk-release.apk`.
+* If you want to test the "release" APK on your device, just open the command prompt at the project folder and type `react-native run-android --variant=release`.
  
-# Problemas encontrados durando o desenvolvimento
+# Throbleshotings
 
-* As vezes ao executar o comando `react-native run-android`, ocorre um problema na compilação dizendo que alguma pasta ou arquivo não pode ser criado. Neste caso basta executar novamente o comando que irá funcionar normalmente. Não descobri por que acontece isso, parece que algum processo fica preso no ADB.
-* No início tive problemas em executar no meu device, mas realmente era problema de driver. Entrei no site da motorola e baixei o Motorola Device Manager e isso resolveu.
-* As vezes quando instala algum pacote pelo NPM, você deve digitar o comando `react-native link nome-do-pacote`, este comando configura o pacote no seu projeto e está descrito na documentação de todos os pacotes. Porém, já aconteceu do comando estar desatualizado no pacote que baixei, e ele não executar todo o processo de configuração. Sendo assim, recomendo verificar sempre a parte de instalação manual que os pacotes geralmente possuem.
-* Tive problemas com um GIF animado que utilizava como loading. Ele simplesmente não animava. Depois de pesquisar achei [esta](http://facebook.github.io/react-native/releases/0.39/docs/image.html#gif-and-webp-support-on-android) documentação e tudo funcionou normalmente.
-* Alguns problemas ocorrem também por não executar o prompt de comando como administrador, sendo assim, é bom sempre executar como administrador.
-* Quando está com a opção `Debug JS Remotely` marcada, a função de `Hot Reload` não funciona muito bem, sendo assim, deve-se manualmente dar reload no aplicativo quando necessários abrindo o menu e clicando em Reload, ou então no caso de estar rodando em uma AVD, basta apertar duas vezes seguidas a tecla `R` do teclado com o foco na AVD.
-* No início do desenvolvimento, percebi que a compilação estava extremamente lenta, levando cerca de 15 a 20 minutos. Depois de pesquisar muito e não achar a solução, consegui constatar que o meu problema era o proxy. Provavelmente na compilação o react-native deve fazer algumas verificações online ou algo assim. Sendo assim, resolvi o problema abrindo o arquivo `gradle.properties` e adicionando as seguintes variáveis:
+* Sometimes when you execute the `react-native run-android` you will see some folder permissions erros, just run the command again.
+* I have some driver problems to run on my MOTO G and I have to download the Motorola Device Manager to fix.
+* Sometimes you have to install some NPM packages and then type `react-native link nome-do-pacote`. This command set the package necessary configs on the right locations, but sometimes this not work well, so I recommend to follow the packages documentations and config manualy.
+* I have some problems to show animated GIF images and after some researches I found [this](http://facebook.github.io/react-native/releases/0.39/docs/image.html#gif-and-webp-support-on-android) solution.
+* Some errros just occours becaouse the prompt command is not open with elevated rights.
+* If the `Debug JS Remotely` option is enabled, the `Hot Reloading` option do not work so well and your have to reload manualy typing the `R` key two times on AVD or open the menu and click on `Reload` option on device.
+* I have some extreme performance problems during the compilation (something about 15 or 20 minutes!) and after a LOT of researches I fix it after put this configurations on `gradle.properties` file:
 
 ```
 systemProp.http.proxyHost=192.****
@@ -168,7 +163,7 @@ systemProp.https.proxyUser=****
 systemProp.https.proxyPassword=****
 ```
 
-* O problema de lentidão na compilação pode ser também por que você está com a opção `Debug JS Remotely` habilitada ao compilar.
+* The extreme performance problems maybe can occour because you are compiling with the `Debug JS Remotely` enabled.
 
-### Contribuir
-Sinta-se a vontade para abrir pull requests com algum problema e solução que encontrou durante o desenvolvimento.
+### Contribute
+Feel free to open pull requests with your problems, solutions, etc.
