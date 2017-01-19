@@ -56,7 +56,8 @@ Este é um repositório pessoal onde eu coloco todos os problemas, configuraçõ
         "react-native/no-inline-styles": "warn",
         "react-native/no-color-literals": "warn",
         "react/prop-types": "off",
-        "no-extra-boolean-cast": "off"
+        "no-extra-boolean-cast": "off",
+	"no-debugger": "warn"
     },
     "plugins": [
         "react",
