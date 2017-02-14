@@ -167,6 +167,7 @@ systemProp.https.proxyPassword=****
 ```
 
 * The extreme performance problems maybe can occour because you are compiling with the `Debug JS Remotely` enabled.
+* I have a painful work trying to make ajax calls between the app and a .NET application running locally at localhost. After I've looked everywhere, thanks to [DuckDuckGo](https://duckduckgo.com/) I found [this](http://stackoverflow.com/a/39108921/1988289) answer that save my life. Just run the command `adb reverse tcp:<port> tcp:<port>` where `<porta>` must be the port of localhost where yout application is running.
 
 ### Contribute
 Feel free to open pull requests with your problems, solutions, etc.
