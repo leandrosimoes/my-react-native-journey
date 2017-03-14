@@ -171,6 +171,7 @@ systemProp.https.proxyPassword=****
 
 * O problema de lentidão na compilação pode ser também por que você está com a opção `Debug JS Remotely` habilitada ao compilar.
 * Encontrei muita dificuldade ao tentar executar chamadas ajax do app para uma aplicação .NET local rodando em meu servidor localhost. Depois de muito procurar e graças ao [DuckDuckGo](https://duckduckgo.com/) encontrei [esta](http://stackoverflow.com/a/39108921/1988289) resposta que salvou minha vida. Basta rodar o comando `adb reverse tcp:<porta> tcp:<porta>` onde `<porta>` seria a porta em que sua aplicação está rodando no localhost.
+* Usei uma WebView em um de meus projetos carregando uma string html vinda do servidor e tive problemas com imagens carregadas diretamente de um servidor da Amazon S3. Depois de muitos testes, percebi que o WebView simplesmente bloqueia links que contenham o caracter "+", mesmo que este esteja "encodado" como "%2B". Não encontrei nenhuma outra solução em lugar nenhum e por fim tive que forçar uma nova url caso a url tenha este caracter.
 
 ### Contribuir
 Sinta-se a vontade para abrir pull requests com algum problema e solução que encontrou durante o desenvolvimento.
