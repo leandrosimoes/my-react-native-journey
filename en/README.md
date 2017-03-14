@@ -168,6 +168,7 @@ systemProp.https.proxyPassword=****
 
 * The extreme performance problems maybe can occour because you are compiling with the `Debug JS Remotely` enabled.
 * I have a painful work trying to make ajax calls between the app and a .NET application running locally at localhost. After I've looked everywhere, thanks to [DuckDuckGo](https://duckduckgo.com/) I found [this](http://stackoverflow.com/a/39108921/1988289) answer that save my life. Just run the command `adb reverse tcp:<port> tcp:<port>` where `<porta>` must be the port of localhost where yout application is running.
+* I have used an WebView component inside one of my projects and I'm having a problem with images loaded from an Amazon s3 server. When this images have the plus "+" character in the url, even this char is encoded like "%2B", the image do not load. After a lot of research, I can't found the solution, so I have to force to generate another url when the original url has this plus char.
 
 ### Contribute
 Feel free to open pull requests with your problems, solutions, etc.
