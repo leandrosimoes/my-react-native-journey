@@ -156,6 +156,7 @@ signingConfigs {
 * Alguns problemas ocorrem também por não executar o prompt de comando como administrador, sendo assim, é bom sempre executar como administrador.
 * Quando está com a opção `Debug JS Remotely` marcada, a função de `Hot Reload` não funciona muito bem, sendo assim, deve-se manualmente dar reload no aplicativo quando necessários abrindo o menu e clicando em Reload, ou então no caso de estar rodando em uma AVD, basta apertar duas vezes seguidas a tecla `R` do teclado com o foco na AVD.
 * No início do desenvolvimento, percebi que a compilação estava extremamente lenta, levando cerca de 15 a 20 minutos. Depois de pesquisar muito e não achar a solução, consegui constatar que o meu problema era o proxy. Provavelmente na compilação o react-native deve fazer algumas verificações online ou algo assim. Sendo assim, resolvi o problema abrindo o arquivo `gradle.properties` e adicionando as seguintes variáveis:
+* A partir do Windows 10, podemos evitar o problema com cópia de arquivos com caminhos muito longos modificando o valor desta chave no registro `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem\LongPathsEnabled` para 1
 
 ```
 systemProp.http.proxyHost=192.****
