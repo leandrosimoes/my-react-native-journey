@@ -153,6 +153,7 @@ signingConfigs {
 * Some errros just occours becaouse the prompt command is not open with elevated rights.
 * If the `Debug JS Remotely` option is enabled, the `Hot Reloading` option do not work so well and your have to reload manualy typing the `R` key two times on AVD or open the menu and click on `Reload` option on device.
 * I have some extreme performance problems during the compilation (something about 15 or 20 minutes!) and after a LOT of researches I fix it after put this configurations on `gradle.properties` file:
+* Since Windows 10, we can avoid long file path copy issues changing the value of this key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem\LongPathsEnabled` to 1
 
 ```
 systemProp.http.proxyHost=192.****
