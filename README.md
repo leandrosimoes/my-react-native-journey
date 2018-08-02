@@ -147,7 +147,7 @@ signingConfigs {
 	- Caso compile com sucesso, o APK será gerado na pasta "...caminhoDoProjeto/android/app/build/outputs/apk/" com o nome de "apk-release.apk".
 	- Caso queira testar a versão release em seu device ou AVD, basta executar o comando `react-native run-android --variant=release`.
  
-# Problemas encontrados durando o desenvolvimento
+# Problemas encontrados durante o desenvolvimento
 
 * As vezes ao executar o comando `react-native run-android`, ocorre um problema na compilação dizendo que alguma pasta ou arquivo não pode ser criado. Neste caso basta executar novamente o comando que irá funcionar normalmente. Não descobri por que acontece isso, parece que algum processo fica preso no ADB.
 * No início tive problemas em executar no meu device, mas realmente era problema de driver. Entrei no site da motorola e baixei o Motorola Device Manager e isso resolveu.
